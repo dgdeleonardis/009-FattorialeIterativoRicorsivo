@@ -15,15 +15,23 @@ int main(int argc, char** argv) {
     rRicorsivo = fattorialeRicorsivo(n);
     
     printf("%d! = %d (formulazione iterativa)\n", n, rIterativo);
-    printf("%d! = %d (formulazione iterativa)\n", n, rRicorsivo);
+    printf("%d! = %d (formulazione ricorsiva)\n", n, rRicorsivo);
     return (EXIT_SUCCESS);
 }
 
 int fattorialeIterativo(int n) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int fat = 1;
+    for(; n > 1; n--) {
+        fat = fat * (n - 1);
+    }
+    return fat;
 }
 int fattorialeRicorsivo(int n) {
-    // TODO Implementa il corpo della funzione
-    return -1;
+    int fat = 1;
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        fat = n * fattorialeRicorsivo(n - 1);
+    }
 }
