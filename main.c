@@ -30,7 +30,7 @@ int fattorialeIterativo(int n) {
 int fattorialeRicorsivo(int n) {
     int fat = 1;
     if (n == 0) {
-        return 1;
+        return fat;
     }
     else {
         fat = n * fattorialeRicorsivo(n - 1);
