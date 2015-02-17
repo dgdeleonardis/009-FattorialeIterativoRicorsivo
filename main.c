@@ -21,11 +21,12 @@ int main(int argc, char** argv) {
 
 int fattorialeIterativo(int n) {
     int fat = 1;
-    for(; n > 1; n--) {
-        fat = fat * (n - 1);
+    for(; n > 0; n--) {
+        fat = fat * n;
     }
     return fat;
 }
+
 int fattorialeRicorsivo(int n) {
     int fat = 1;
     if (n == 0) {
